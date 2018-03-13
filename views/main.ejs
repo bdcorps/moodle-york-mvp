@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
-<body>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+	<body>
+		<div class='container'>
+			<div class='row mt-3'>
+				<h4>YORKU PERPETUAL LITE MVP</h4>
+			</div>
+			<div class='row'>
+				<p>Date: <span id='currentDate'></span></p>
+			</div>
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+			<div class="row mt-1">
+				<div class='chatbox'>
+					<div class='chatbox-body'>
+						<% if (payload && question) { -%>
+							<%= question %><br/>
+							<%= payload %>	
+						<% } -%>
+					</div>
+				</div>
+			</div>
 
-</body>
+			<div class='row mt-3'>
+				<form id='submit-conversation' action='/send-convo' method='post'>
+					<input class='user-input' name='userInput' id='userInput' />
+				</form>
+			</div>
+		</div>
+
+		
+		<script>
+			var message = "<%-payload %>";
+		</script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		<script type="text/javascript" src='js/main.js'></script>
+	</body>
 </html>
