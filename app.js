@@ -62,10 +62,13 @@ app.post('/send-convo', function(req, res) {
 	request(options, function (error, response, body) {
 		if (error) throw new Error(error);
 
+		body = body.replace(/<p>|<\/p>|<|>/g, '')
 		res.render('main.ejs',{
 			question: message,
 			payload: body
 		});
+
+
 	});
 })
 
