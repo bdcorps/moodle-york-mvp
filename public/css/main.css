@@ -1,31 +1,46 @@
 body {
 	font-family: 'Oxygen', sans-serif;
 }
-#currentDate {
-	color: blue;
+
+.col-md-9{max-width: 100%;}
+
+.revdate {
+	font-size:10px;
 }
 
 .chatbox {
 	height: 70vh;
 	max-height: 70vh;
 	width: 50vw;
-	background-color: rgba(0,0,0,0.15);
+	background-color: #dedede;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 }
 #submit-conversation {
 	margin-left: auto;
 	margin-right: auto;
 }
 .user-input {
-	width: 50vw;
-	background-color: rgba(0,0,0,0.15);
-	border-radius: 5px;
+	width: 37.5vw;
+	background-color: #dedede;
+	/*border-radius: 5px;*/
 	border-style: none;
 	text-indent: 10px;
 	padding: 5px 0 5px 0;
+	margin-right:2.5vw;
+	height: 36px;
 }
 .user-input:focus {
-	outline: none;
+border: 2px solid red;
+	background-color: white;
+}
+
+button{
+	width:10vw;
+	background-color: white;
+	height: 36px;
+	color:red;
+
+border: 2px solid red;
 }
