@@ -12,7 +12,7 @@ $(document).ready(function() {
 		mm = '0' + mm;
 	}
 
-	$("#currentDate").html(mm + ' / ' + dd + ' / ' + yy);
+	$("#currentDate").html(mm + '/' + dd + '/' + yy);
 	console.log(message);
 	$("#chatbox-body").append("<p>"+message+"</p>");
 });

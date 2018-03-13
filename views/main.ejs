@@ -8,12 +8,17 @@
 	<body>
 		<div class='container'>
 			<div class='row mt-3'>
-				<h4>YORKU PERPETUAL LITE MVP</h4>
-			</div>
-			<div class='row'>
-				<p>Date: <span id='currentDate'></span></p>
-			</div>
+				<div class="col-md-3">
+				<img src="/images/york_logo_sm.gif" alt="">
+				</div>
+	<div>
 
+					<div class="col-md-9">
+				<div> <span style="color:red;">YORKU</span> PERPETUAL LITE MVP</div>
+			
+				<div class="revdate">Rev. <span id='currentDate'></span></div>
+	</div></div>
+</div>
 			<div class="row mt-1">
 				<div class='chatbox'>
 					<div class='chatbox-body'>
@@ -28,6 +33,7 @@
 			<div class='row mt-3'>
 				<form id='submit-conversation' action='/send-convo' method='post'>
 					<input class='user-input' name='userInput' id='userInput' />
+					<button>Ask Watson</button>
 				</form>
 			</div>
 		</div>
