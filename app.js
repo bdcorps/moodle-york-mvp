@@ -36,7 +36,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/send-convo', function(req, res) {
-	const message = req.body.userInput;
+	let question = req.body.userInput.trim();
 
 	// axios({
 	// 	method: 'post',
@@ -51,20 +51,23 @@ app.post('/send-convo', function(req, res) {
 	// 		payload: response
 	// 	})
 	// });
-	console.log('message: ' + message);
+	console.log('question: ' + question);
 	var options = { method: 'POST',
 		url: 'https://moodle-lite-mvp-nodered.mybluemix.net/testing',
-		qs: { message: message },
+		qs: { question: question },
 		headers: 
 		 { 'postman-token': 'a5430559-484b-014a-41bc-e93cead23a02',
 			 'cache-control': 'no-cache' } };
 
 	request(options, function (error, response, body) {
 		if (error) throw new Error(error);
-
-		body = body.replace(/<p>|<\/p>|<|>/g, '')
+		if (question === '') {
+			question = 'Blank';
+			body = 'You asked nothing! Please ask a valid question';
+		}
+		body = body.replace(/<p>|<\/p>|<|>/g, '');
 		res.render('main.ejs',{
-			question: message,
+			question: question,
 			payload: body
 		});
 

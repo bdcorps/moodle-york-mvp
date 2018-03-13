@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 	$("#currentDate").html(mm + '/' + dd + '/' + yy);
 	console.log(message);
-	$("#chatbox-body").append("<p>"+message+"</p>");
+	// $("#chatbox-body").append("<p>"+message+"</p>");
 });
 
 

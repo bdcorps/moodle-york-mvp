@@ -5,17 +5,23 @@ body {
 .col-md-9{max-width: 100%;}
 
 .revdate {
-	font-size:10px;
+	font-size:11px;
 }
 
 .chatbox {
-	height: 70vh;
+	height: 60vh;
 	max-height: 70vh;
 	width: 50vw;
 	background-color: #dedede;
 	margin-left: auto;
 	margin-right: auto;
 	/*border-radius: 3px;*/
+}
+.chatbox-body {
+	padding: 25px;
+}
+#tabbed {
+	padding-left: 25px;
 }
 #submit-conversation {
 	margin-left: auto;
@@ -30,17 +36,27 @@ body {
 	padding: 5px 0 5px 0;
 	margin-right:2.5vw;
 	height: 36px;
+	transition: all 0.5s;
 }
 .user-input:focus {
-border: 2px solid red;
+	border: 2px solid red;
 	background-color: white;
+	outline:none;
 }
-
-button{
+#submitButton {
+	font-size: 1.8vh;
 	width:10vw;
 	background-color: white;
 	height: 36px;
 	color:red;
+	border: 0.5px solid red;
+	transition: all 0.5s;
+}
+#submitButton:hover {
+	background-color: red;
+	color: white;
+}
 
-border: 2px solid red;
+.filler {
+	height: 5vh;
 }
