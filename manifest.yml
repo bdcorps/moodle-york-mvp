@@ -1,0 +1,10 @@
+
+applications:
+- name: moodle-york-mvp
+  buildpack: sdk-for-nodejs
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  env:
+NPM_CONFIG_PRODUCTION: false
